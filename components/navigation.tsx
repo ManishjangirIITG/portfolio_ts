@@ -47,7 +47,7 @@ export function Navigation() {
           <div className="flex-shrink-0">
             <button
               onClick={() => scrollToSection("#home")}
-              className="text-xl font-bold text-foreground hover:text-accent transition-colors"
+              className="text-xl hover:cursor-pointer font-bold text-foreground hover:text-accent transition-colors"
             >
               Manish Jangir
             </button>
@@ -60,7 +60,7 @@ export function Navigation() {
                 <button
                   key={item.name}
                   onClick={() => scrollToSection(item.href)}
-                  className="text-muted-foreground hover:text-foreground px-3 py-2 text-sm font-medium transition-colors"
+                  className="text-muted-foreground hover:cursor-pointer hover:text-foreground px-3 py-2 text-sm font-medium transition-colors"
                 >
                   {item.name}
                 </button>

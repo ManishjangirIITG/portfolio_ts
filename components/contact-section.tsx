@@ -216,7 +216,7 @@ export function ContactSection() {
                 <Button
                   type="submit"
                   disabled={status === "submitting"}
-                  className="w-full border border-white/10 dark:border-white/5 bg-white/10 dark:bg-white/5 backdrop-blur-sm hover:bg-white/20 dark:hover:bg-white/10"
+                  className="w-full border text-foreground hover:cursor-pointer border-white/10 dark:border-white/5 hover:bg-accent-foreground dark:bg-white/5 backdrop-blur-sm bg-accent/15 dark:hover:bg-white/10"
                 >
                   <Send className="mr-2 h-4 w-4" />
                   {status === "submitting" ? "Sending..." : status === "success" ? "Sent!" : "Send Message"}

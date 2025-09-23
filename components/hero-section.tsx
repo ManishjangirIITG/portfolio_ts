@@ -77,7 +77,7 @@ export function HeroSection() {
             <Button
               variant="outline"
               size="lg"
-              className="px-8 py-3 text-lg border border-white/10 dark:border-white/5 bg-white/10 dark:bg-white/5 backdrop-blur-sm hover:bg-white/20 dark:hover:bg-white/10 hover:cursor-pointer"
+              className="px-8 py-3 text-lg border border-white/10 dark:border-white/5 bg-white/10 dark:bg-white/5 backdrop-blur-sm hover:bg-accent/10 dark:hover:bg-white/10 hover:cursor-pointer"
               onClick={() => scrollToSection("#contact")}
             >
               <Mail className="mr-2 h-5 w-5" />
