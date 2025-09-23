@@ -23,17 +23,39 @@ export async function POST(request: Request) {
     if (!message) return NextResponse.json({ error: "Message is required" }, { status: 400 })
 
     const receivedAt = new Date().toISOString()
-    const payload = { name, email, message, receivedAt }
+    // const payload = { name, email, message, receivedAt }
+
+    const payload = {
+      embeds: [
+        {
+          title: "📩 New Contact Form Submission",
+          color: 5814783, // indigo-blue
+          fields: [
+            { name: "Name", value: name || "N/A", inline: true },
+            { name: "Email", value: email || "N/A", inline: true },
+            { name: "Message", value: message || "N/A" },
+            { name: "Received At", value: receivedAt, inline: true},
+          ],
+          timestamp: new Date().toISOString(),
+        },
+      ],
+    };
 
     // Optional webhook forwarding for notifications (e.g., to Slack/Discord/Email service)
     const webhookUrl = process.env.CONTACT_WEBHOOK_URL
     if (webhookUrl) {
       try {
-        await fetch(webhookUrl, {
+        const res = await fetch(webhookUrl, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(payload),
-        })
+        });
+
+        if (!res.ok) {
+          console.error("Discord webhook rejected:", res.status, await res.text());
+        } else {
+          console.log("✅ Discord webhook sent successfully");
+        }
       } catch (err) {
         // Continue even if webhook fails; we still acknowledge receipt
         console.error("Contact webhook error", err)
