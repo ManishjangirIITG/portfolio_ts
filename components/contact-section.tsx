@@ -20,14 +20,14 @@ const contactInfo = [
   {
     icon: Mail,
     label: "Email (Academic)",
-    value: "m.jangir@iitg.ac.in",
-    href: "mailto:m.jangir@iitg.ac.in",
+    value: "kindly contact via form",
+    href: "#",
   },
   {
     icon: Mail,
     label: "Email (Personal)",
-    value: "manishjangir139@gmail.com",
-    href: "mailto:manishjangir139@gmail.com",
+    value: "kindly contact via form",
+    href: "#",
   },
   {
     icon: MapPin,
