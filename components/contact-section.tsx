@@ -17,18 +17,18 @@ const contactInfo = [
     value: "+91-XXXXXXXXXX",
     href: "tel:+91-XXXXXXXXXX",
   },
-  {
-    icon: Mail,
-    label: "Email (Academic)",
-    value: "kindly contact via form",
-    href: "#",
-  },
-  {
-    icon: Mail,
-    label: "Email (Personal)",
-    value: "kindly contact via form",
-    href: "#",
-  },
+  // {
+  //   icon: Mail,
+  //   label: "Email (Academic)",
+  //   value: "kindly contact via form",
+  //   href: "#",
+  // },
+  // {
+  //   icon: Mail,
+  //   label: "Email (Personal)",
+  //   value: "kindly contact via form",
+  //   href: "#",
+  // },
   {
     icon: MapPin,
     label: "Location",
