@@ -69,7 +69,7 @@ export function HeroSection() {
             style={{ animationDelay: "1s" }}
           >
             <Button size="lg" className="px-8 py-3 text-lg hover:cursor-pointer" asChild>
-              <a href="/ManishJangir_220122033.pdf" download="ManishJangir_220122033.pdf">
+              <a href="/placeholder_resume.pdf" download="/placeholder_resume.pdf">
                 <Download className="mr-2 h-5 w-5" />
                 Download Resume
               </a>
